@@ -26,12 +26,12 @@
 				$types = [];
 				if ( array_key_exists( 'mp4', $atts ) )
 				{
-					$types[] = [ 'type' => 'mp4', getSourceFromID( $atts[ 'mp4' ] ) ];
+					$types[] = [ 'type' => 'mp4', 'url' => getSourceFromID( $atts[ 'mp4' ] ) ];
 					unset( $atts[ 'mp4' ] );
 				}
 				if ( array_key_exists( 'webm', $atts ) )
 				{
-					$types[] = [ 'type' => 'webm', getSourceFromID( $atts[ 'webm' ] ) ];
+					$types[] = [ 'type' => 'webm', 'url' => getSourceFromID( $atts[ 'webm' ] ) ];
 					unset( $atts[ 'webm' ] );
 				}
 				if ( array_key_exists( 'poster-id', $atts ) )
