@@ -46,7 +46,7 @@
 
 		function getSourceFromID( string $id )
 		{
-			return wp get attachment url( $id );
+			return wp_get_attachment_url( $id );
 		}
 
 		function getPosterSourceFromID( string $id, string $size )
