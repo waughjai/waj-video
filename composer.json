@@ -1,0 +1,20 @@
+{
+    "name": "waughj/waj-video",
+    "description": "WordPress plugin for easy generation o' video HTML.",
+    "keywords": [ "wordpress", "plugin", "html", "generation" ],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Jaimeson Waugh",
+            "email": "waughjai@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=7.0",
+		"waughj/html-video": ">=0.1.0"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    }
+}
