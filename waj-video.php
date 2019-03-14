@@ -36,7 +36,7 @@
 				}
 				if ( array_key_exists( 'poster-id', $atts ) )
 				{
-					$atts[ 'poster' ] = getSourceFromID( $atts[ 'poster-id' ], 'large_medium' );
+					$atts[ 'poster' ] = getPosterSourceFromID( $atts[ 'poster-id' ], 'large_medium' );
 					unset( $atts[ 'poster-id' ] );
 				}
 				$video = new HTMLVideo( $types, $atts );
@@ -44,9 +44,14 @@
 			}
 		);
 
-		function getSourceFromID( string $id, $size = null )
+		function getSourceFromID( string $id )
 		{
-			$image = ( $size === null ) ? wp_get_attachment_image_src( intval( $id ) ) : wp_get_attachment_image_src( intval( $id ), $size );
+			return wp get attachment url( $id );
+		}
+
+		function getPosterSourceFromID( string $id, string $size )
+		{
+			$image = wp_get_attachment_image_src( intval( $id ), $size );
 			return $image[ 0 ];
 		}
 	}
