@@ -36,7 +36,7 @@
 				}
 				if ( array_key_exists( 'poster-id', $atts ) )
 				{
-					$atts[ 'poster' ] = getSourceFromID( $atts[ 'poster-id' ] ];
+					$atts[ 'poster' ] = getSourceFromID( $atts[ 'poster-id' ] );
 					unset( $atts[ 'webm' ] );
 				}
 				$video = new HTMLVideo( $types, $atts );
