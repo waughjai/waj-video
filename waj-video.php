@@ -36,17 +36,17 @@
 				}
 				if ( array_key_exists( 'poster-id', $atts ) )
 				{
-					$atts[ 'poster' ] = getSourceFromID( $atts[ 'poster-id' ] );
-					unset( $atts[ 'webm' ] );
+					$atts[ 'poster' ] = getSourceFromID( $atts[ 'poster-id' ], 'large_medium' );
+					unset( $atts[ 'poster-id' ] );
 				}
 				$video = new HTMLVideo( $types, $atts );
 				return $video->getHTML();
 			}
 		);
 
-		function getSourceFromID( string $id )
+		function getSourceFromID( string $id, $size = null )
 		{
-			$image = wp_get_attachment_image_src( intval( $id ) );
+			$image = ( $size === null ) ? wp_get_attachment_image_src( intval( $id ) ) : wp_get_attachment_image_src( intval( $id ), $size );
 			return $image[ 0 ];
 		}
 	}
