@@ -20,7 +20,7 @@
 
 		add_shortcode
 		(
-			'update-video',
+			'upload-video',
 			function( $atts )
 			{
 				$types = [];
